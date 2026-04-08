@@ -1,0 +1,33 @@
+name: 'ArchLens Architecture Scan'
+description: 'Detect architecture drift and boundary violations in your codebase. Provides architecture context for coding agents.'
+author: 'ArchLens'
+
+branding:
+  icon: 'shield'
+  color: 'blue'
+
+inputs:
+  config-path:
+    description: 'Path to .archlens.yml config file'
+    required: false
+    default: '.archlens.yml'
+  fail-on-violations:
+    description: 'Fail CI when architecture violations are found'
+    required: false
+    default: 'true'
+
+outputs:
+  violation-count:
+    description: 'Number of fail-level violations found'
+  warning-count:
+    description: 'Number of warn-level violations found'
+  has-failures:
+    description: 'Whether any fail-level violations were found (true/false)'
+  context-path:
+    description: 'Path to generated archlens_context.json'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.config-path }}

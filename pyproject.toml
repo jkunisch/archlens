@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "archlens"
+version = "0.1.0"
+description = "Architecture Context Layer for Coding Agents — gives AI agents architecture awareness before they write code"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+action = [
+    "graphifyy",
+    "httpx>=0.27",
+]
+mcp = [
+    "mcp>=1.27",
+    "graphifyy",
+]
+cli = [
+    "click>=8.0",
+    "rich>=13.0",
+    "graphifyy",
+]
+all = [
+    "archlens[action,mcp,cli]",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "mypy>=1.10",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+archlens = "cli.main:app"
+
+[tool.setuptools.packages.find]
+include = ["action*", "api*", "shared*", "mcp*", "cli*"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

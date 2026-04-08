@@ -1,0 +1,54 @@
+# ArchLens — Cursor Rules
+
+## Project Context
+ArchLens is a GitHub-native Architecture Drift Radar SaaS. It builds knowledge graphs of codebases via Graphify (AST-based, no embeddings), diffs the topology on every PR, and surfaces boundary violations, emerging god nodes, and cross-cluster edges as PR comments.
+
+## Architecture (Non-Negotiable)
+- 4 bounded components: `action/`, `api/`, `dashboard/`, `shared/`
+- Worker logic lives in `api/workers/`, NOT as a separate top-level module
+- ZERO cross-imports between components. Shared types ONLY in `shared/schemas/`
+- Graphify is a blackbox dependency — import, don't fork
+
+## Stack
+- Backend: Python 3.11+, FastAPI, Pydantic v2, PostgreSQL, Redis + RQ
+- Frontend: Next.js 14+ (App Router), TypeScript (strict), shadcn/ui
+- Action: Docker-based GitHub Action, Python
+- Shared: Pydantic schemas (Python), Zod schemas (TypeScript)
+
+## Code Style
+- Language: English (code, comments, commit messages)
+- Context docs: German
+- Type hints everywhere (Python + TypeScript). No `Any`, no `any`.
+- Conventional Commits: feat:, fix:, refactor:, docs:, test:
+- Tests: pytest (Python), vitest (TypeScript). Target >80% coverage.
+
+## Critical Rules
+1. NEVER process or transmit source code. Only graph metadata (node names, edge types, cluster IDs).
+2. NEVER use LLMs where deterministic graph traversal suffices.
+3. NEVER implement Phase 2+ features during Phase 1. Check `context/todo.md` for current phase.
+4. ALWAYS update `context/decisions.md` when making architectural decisions.
+5. ALWAYS check `AGENTS.md` §4 before importing from another component.
+
+## Graphify Usage
+```python
+# Preferred: Direct Python import
+from graphify.analyze import build_graph, graph_diff
+from graphify.cluster import leiden_cluster
+
+# Fallback only if import fails
+import subprocess
+result = subprocess.run(["graphify", "."], capture_output=True)
+```
+
+## File Naming
+- Python: snake_case (models/graph_snapshot.py)
+- TypeScript: kebab-case (components/pr-diff-view.tsx)
+- Schemas: {entity}_schema.py / {entity}.schema.ts
+- Tests: test_{module}.py / {module}.test.ts
+
+## PR Comments (Product Output)
+- Must include Mermaid diagram for visual diff
+- Red edges = new forbidden dependency
+- Yellow edges = new INFERRED cross-cluster edge
+- Green = resolved dependency
+- Always show blast radius count

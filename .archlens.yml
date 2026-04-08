@@ -1,0 +1,40 @@
+# .archlens.yml — ArchLens scans itself (P6: Dogfooding)
+version: 1
+
+forbid:
+  # P5: Bounded Components — no cross-imports
+  - from: "mcp/*"
+    to: "api/*"
+    message: "MCP server must not import API backend (Phase 2)"
+  - from: "cli/*"
+    to: "api/*"
+    message: "CLI must not import API backend (Phase 2)"
+  - from: "cli/*"
+    to: "mcp/*"
+    message: "CLI should not directly import MCP server internals (use cli serve)"
+  - from: "action/*"
+    to: "api/*"
+    message: "Engine must not import API backend"
+  - from: "action/*"
+    to: "dashboard/*"
+    message: "Engine must not import dashboard"
+
+warn:
+  - from: "mcp/*"
+    to: "action/*"
+    message: "MCP imports from engine — ensure only via engine_bridge.py"
+
+thresholds:
+  # Shared schemas are high-fanin by design (every module imports them)
+  god_node_warn: 30
+  god_node_fail: 60
+
+ignore:
+  - "__pycache__/*"
+  - "*.pyc"
+  - "spike/*"
+  - ".venv/*"
+  - "tests/*"
+  # Stdlib nodes are not our architecture
+  - "pathlib"
+  - "basemodel"

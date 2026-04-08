@@ -1,0 +1,26 @@
+# .archlens.yml — ArchLens Test Configuration
+version: 1
+
+forbid:
+  - from: "frontend/*"
+    to: "database/*"
+    message: "Frontend must not access database directly. Use the API layer."
+
+  - from: "frontend/*"
+    to: "services/*"
+    message: "Frontend must not access services directly. Use the API layer."
+
+warn:
+  - from: "api/*"
+    to: "database/*"
+    message: "Consider using a repository pattern instead of direct DB access."
+
+thresholds:
+  god_node_warn: 10
+  god_node_fail: 25
+  cross_cluster_warn: 5
+  cross_cluster_fail: 10
+
+ignore:
+  - "__pycache__/*"
+  - "*.pyc"

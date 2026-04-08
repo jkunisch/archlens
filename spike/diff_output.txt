@@ -1,0 +1,575 @@
+﻿======================================================================
+STEP 1: Testing Graphify Python Import Paths
+======================================================================
+Γ£à from graphify.analyze import graph_diff ΓÇö WORKS
+Γ£à from graphify.extract import extract, collect_files ΓÇö WORKS
+Γ£à from graphify.build import build_from_json ΓÇö WORKS
+Γ£à from graphify.cluster import cluster ΓÇö WORKS
+Γ£à from graphify.export import to_json ΓÇö WORKS
+Γ£à import graphify (lazy attrs) ΓÇö WORKS
+
+======================================================================
+STEP 2: Building Base Graph (clean architecture)
+======================================================================
+
+Collected 14 files:
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\api\__init__.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\api\middleware.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\api\routes.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\database\__init__.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\database\connection.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\database\models.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\frontend\__init__.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\frontend\components.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\frontend\views.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\services\__init__.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\services\auth.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\services\payment.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\utils\__init__.py
+  C:\Users\Jonatan\Documents\projects_2026\archlens\spike\dummy_repo\utils\helpers.py
+
+Running AST extraction...
+Extraction result: 98 nodes, 169 edges
+NetworkX graph: 94 nodes, 152 edges
+Communities: 7
+  [0] Community 0: 21 nodes
+  [1] Community 1: 20 nodes
+  [2] Community 2: 16 nodes
+  [3] Community 3: 16 nodes
+  [4] Community 4: 12 nodes
+  [5] Community 5: 8 nodes
+  [6] Community 6: 1 nodes
+
+Γ£à Base graph saved to C:\Users\Jonatan\Documents\projects_2026\archlens\spike\base_graph.json
+
+Base graph edges:
+  middleware.py --[contains]--> AuthMiddleware  (EXTRACTED)
+  middleware.py --[rationale_for]--> API middleware - authentication and request processing.  (EXTRACTED)
+  AuthMiddleware --[method]--> .__init__()  (EXTRACTED)
+  AuthMiddleware --[method]--> .authenticate()  (EXTRACTED)
+  AuthMiddleware --[method]--> .process_request()  (EXTRACTED)
+  AuthMiddleware --[rationale_for]--> Middleware that validates auth tokens on incoming requests.  (EXTRACTED)
+  AuthMiddleware --[uses]--> AuthService  (INFERRED)
+  AuthMiddleware --[uses]--> OrderRoutes  (INFERRED)
+  AuthMiddleware --[uses]--> AuthRoutes  (INFERRED)
+  AuthMiddleware --[uses]--> HTTP route handlers for order operations.  (INFERRED)
+  AuthMiddleware --[uses]--> POST /orders - create a new order.  (INFERRED)
+  AuthMiddleware --[uses]--> GET /orders - list orders.  (INFERRED)
+  AuthMiddleware --[uses]--> HTTP route handlers for authentication.  (INFERRED)
+  .authenticate() --[calls]--> .process_request()  (INFERRED)
+  .authenticate() --[rationale_for]--> Check if request has a valid auth token.  (EXTRACTED)
+  .process_request() --[rationale_for]--> Process and enrich request before routing.  (EXTRACTED)
+  API middleware - authentication and request processing. --[uses]--> AuthService  (INFERRED)
+  Middleware that validates auth tokens on incoming requests. --[uses]--> AuthService  (INFERRED)
+  Check if request has a valid auth token. --[uses]--> AuthService  (INFERRED)
+  Process and enrich request before routing. --[uses]--> AuthService  (INFERRED)
+  routes.py --[contains]--> OrderRoutes  (EXTRACTED)
+  routes.py --[contains]--> AuthRoutes  (EXTRACTED)
+  OrderRoutes --[method]--> .__init__()  (EXTRACTED)
+  OrderRoutes --[method]--> .create_order()  (EXTRACTED)
+  OrderRoutes --[method]--> .get_orders()  (EXTRACTED)
+  OrderRoutes --[rationale_for]--> HTTP route handlers for order operations.  (EXTRACTED)
+  OrderRoutes --[uses]--> PaymentService  (INFERRED)
+  OrderRoutes --[uses]--> AuthService  (INFERRED)
+  OrderRoutes --[uses]--> DashboardView  (INFERRED)
+  OrderRoutes --[uses]--> LoginView  (INFERRED)
+  OrderRoutes --[uses]--> Frontend views - renders pages by calling the API layer.  (INFERRED)
+  OrderRoutes --[uses]--> Render an HTML template with data.  (INFERRED)
+  OrderRoutes --[uses]--> Render the dashboard page.  (INFERRED)
+  OrderRoutes --[uses]--> Render the login page.  (INFERRED)
+  .create_order() --[rationale_for]--> POST /orders - create a new order.  (EXTRACTED)
+  .get_orders() --[rationale_for]--> GET /orders - list orders.  (EXTRACTED)
+  AuthRoutes --[method]--> .__init__()  (EXTRACTED)
+  AuthRoutes --[method]--> .login()  (EXTRACTED)
+  AuthRoutes --[rationale_for]--> HTTP route handlers for authentication.  (EXTRACTED)
+  AuthRoutes --[uses]--> PaymentService  (INFERRED)
+  AuthRoutes --[uses]--> AuthService  (INFERRED)
+  AuthRoutes --[uses]--> DashboardView  (INFERRED)
+  AuthRoutes --[uses]--> LoginView  (INFERRED)
+  AuthRoutes --[uses]--> Frontend views - renders pages by calling the API layer.  (INFERRED)
+  AuthRoutes --[uses]--> Render an HTML template with data.  (INFERRED)
+  AuthRoutes --[uses]--> Render the dashboard page.  (INFERRED)
+  AuthRoutes --[uses]--> Render the login page.  (INFERRED)
+  HTTP route handlers for order operations. --[uses]--> PaymentService  (INFERRED)
+  HTTP route handlers for order operations. --[uses]--> AuthService  (INFERRED)
+  POST /orders - create a new order. --[uses]--> PaymentService  (INFERRED)
+  POST /orders - create a new order. --[uses]--> AuthService  (INFERRED)
+  GET /orders - list orders. --[uses]--> PaymentService  (INFERRED)
+  GET /orders - list orders. --[uses]--> AuthService  (INFERRED)
+  HTTP route handlers for authentication. --[uses]--> PaymentService  (INFERRED)
+  HTTP route handlers for authentication. --[uses]--> AuthService  (INFERRED)
+  connection.py --[contains]--> DatabasePool  (EXTRACTED)
+  connection.py --[rationale_for]--> Database connection management.  (EXTRACTED)
+  DatabasePool --[method]--> .__init__()  (EXTRACTED)
+  DatabasePool --[method]--> .get_connection()  (EXTRACTED)
+  DatabasePool --[method]--> .release()  (EXTRACTED)
+  DatabasePool --[rationale_for]--> Connection pool for database access.  (EXTRACTED)
+  DatabasePool --[uses]--> User  (INFERRED)
+  DatabasePool --[uses]--> Product  (INFERRED)
+  DatabasePool --[uses]--> Order  (INFERRED)
+  DatabasePool --[uses]--> Database models - SQLAlchemy-style ORM definitions.  (INFERRED)
+  DatabasePool --[uses]--> Persist user to database.  (INFERRED)
+  DatabasePool --[uses]--> Persist product to database.  (INFERRED)
+  DatabasePool --[uses]--> AuthService  (INFERRED)
+  DatabasePool --[uses]--> Authentication service - handles user login and token management.  (INFERRED)
+  DatabasePool --[uses]--> Handles authentication flows.  (INFERRED)
+  DatabasePool --[uses]--> Authenticate user and return a session token.  (INFERRED)
+  DatabasePool --[uses]--> Verify if a session token is valid.  (INFERRED)
+  DatabasePool --[uses]--> Invalidate a session token.  (INFERRED)
+  DatabasePool --[uses]--> PaymentService  (INFERRED)
+  DatabasePool --[uses]--> Payment processing service.  (INFERRED)
+  DatabasePool --[uses]--> Handles payment processing for orders.  (INFERRED)
+  DatabasePool --[uses]--> Process payment for an order.  (INFERRED)
+  .get_connection() --[rationale_for]--> Get a connection from the pool.  (EXTRACTED)
+  .release() --[rationale_for]--> Release a connection back to the pool.  (EXTRACTED)
+  models.py --[contains]--> User  (EXTRACTED)
+  models.py --[contains]--> Product  (EXTRACTED)
+  models.py --[contains]--> Order  (EXTRACTED)
+  models.py --[rationale_for]--> Database models - SQLAlchemy-style ORM definitions.  (EXTRACTED)
+  User --[method]--> .__init__()  (EXTRACTED)
+  User --[method]--> .save()  (EXTRACTED)
+  User --[uses]--> AuthService  (INFERRED)
+  User --[uses]--> Authentication service - handles user login and token management.  (INFERRED)
+  User --[uses]--> Handles authentication flows.  (INFERRED)
+  User --[uses]--> Authenticate user and return a session token.  (INFERRED)
+  User --[uses]--> Verify if a session token is valid.  (INFERRED)
+  User --[uses]--> Invalidate a session token.  (INFERRED)
+  User --[uses]--> PaymentService  (INFERRED)
+  User --[uses]--> Payment processing service.  (INFERRED)
+  User --[uses]--> Handles payment processing for orders.  (INFERRED)
+  User --[uses]--> Process payment for an order.  (INFERRED)
+  .save() --[rationale_for]--> Persist user to database.  (EXTRACTED)
+  Product --[method]--> .__init__()  (EXTRACTED)
+  Product --[method]--> .save()  (EXTRACTED)
+  .save() --[rationale_for]--> Persist product to database.  (EXTRACTED)
+  Order --[method]--> .__init__()  (EXTRACTED)
+  Order --[uses]--> PaymentService  (INFERRED)
+  Order --[uses]--> Payment processing service.  (INFERRED)
+  Order --[uses]--> Handles payment processing for orders.  (INFERRED)
+  Order --[uses]--> Process payment for an order.  (INFERRED)
+  components.py --[contains]--> ProductCard  (EXTRACTED)
+  components.py --[contains]--> NavigationBar  (EXTRACTED)
+  components.py --[rationale_for]--> Frontend UI components.  (EXTRACTED)
+  ProductCard --[method]--> .__init__()  (EXTRACTED)
+  ProductCard --[method]--> .render()  (EXTRACTED)
+  ProductCard --[rationale_for]--> Renders a product card in the UI.  (EXTRACTED)
+  .render() --[rationale_for]--> Render the product card as HTML.  (EXTRACTED)
+  NavigationBar --[method]--> .__init__()  (EXTRACTED)
+  NavigationBar --[method]--> .render()  (EXTRACTED)
+  NavigationBar --[rationale_for]--> Top navigation bar component.  (EXTRACTED)
+  .render() --[rationale_for]--> Render navigation bar.  (EXTRACTED)
+  views.py --[contains]--> render_template()  (EXTRACTED)
+  views.py --[contains]--> DashboardView  (EXTRACTED)
+  views.py --[contains]--> LoginView  (EXTRACTED)
+  views.py --[rationale_for]--> Frontend views - renders pages by calling the API layer.  (EXTRACTED)
+  render_template() --[calls]--> .render()  (INFERRED)
+  render_template() --[calls]--> .render()  (INFERRED)
+  render_template() --[rationale_for]--> Render an HTML template with data.  (EXTRACTED)
+  DashboardView --[method]--> .__init__()  (EXTRACTED)
+  DashboardView --[method]--> .render()  (EXTRACTED)
+  .render() --[rationale_for]--> Render the dashboard page.  (EXTRACTED)
+  LoginView --[method]--> .__init__()  (EXTRACTED)
+  LoginView --[method]--> .render()  (EXTRACTED)
+  .render() --[rationale_for]--> Render the login page.  (EXTRACTED)
+  auth.py --[contains]--> AuthService  (EXTRACTED)
+  auth.py --[rationale_for]--> Authentication service - handles user login and token management.  (EXTRACTED)
+  AuthService --[method]--> .__init__()  (EXTRACTED)
+  AuthService --[method]--> .login()  (EXTRACTED)
+  AuthService --[method]--> .verify_token()  (EXTRACTED)
+  AuthService --[method]--> .logout()  (EXTRACTED)
+  AuthService --[rationale_for]--> Handles authentication flows.  (EXTRACTED)
+  .login() --[rationale_for]--> Authenticate user and return a session token.  (EXTRACTED)
+  .verify_token() --[rationale_for]--> Verify if a session token is valid.  (EXTRACTED)
+  .logout() --[rationale_for]--> Invalidate a session token.  (EXTRACTED)
+  payment.py --[contains]--> PaymentService  (EXTRACTED)
+  payment.py --[rationale_for]--> Payment processing service.  (EXTRACTED)
+  PaymentService --[method]--> .__init__()  (EXTRACTED)
+  PaymentService --[method]--> .process_payment()  (EXTRACTED)
+  PaymentService --[method]--> .refund()  (EXTRACTED)
+  PaymentService --[rationale_for]--> Handles payment processing for orders.  (EXTRACTED)
+  .process_payment() --[rationale_for]--> Process payment for an order.  (EXTRACTED)
+  helpers.py --[contains]--> generate_id()  (EXTRACTED)
+  helpers.py --[contains]--> format_currency()  (EXTRACTED)
+  helpers.py --[contains]--> validate_email()  (EXTRACTED)
+  helpers.py --[rationale_for]--> Shared utility functions used across all layers.  (EXTRACTED)
+  generate_id() --[rationale_for]--> Generate a unique ID with the given prefix.  (EXTRACTED)
+  format_currency() --[rationale_for]--> Format a monetary amount for display.  (EXTRACTED)
+  validate_email() --[rationale_for]--> Basic email validation.  (EXTRACTED)
+
+======================================================================
+STEP 3: Introducing Boundary Violations
+======================================================================
+Γ£à Violation 1: frontend/views.py ΓåÆ database/models.py (from database.models import User)
+Γ£à Violation 2: frontend/components.py ΓåÆ services/payment.py (from services.payment import PaymentService)
+
+======================================================================
+STEP 4: Building Head Graph (with violations)
+======================================================================
+Extraction result: 107 nodes, 206 edges
+NetworkX graph: 103 nodes, 187 edges
+Γ£à Head graph saved to C:\Users\Jonatan\Documents\projects_2026\archlens\spike\head_graph.json
+
+Head graph edges:
+  middleware.py --[contains]--> AuthMiddleware  (EXTRACTED)
+  middleware.py --[rationale_for]--> API middleware - authentication and request processing.  (EXTRACTED)
+  AuthMiddleware --[method]--> .__init__()  (EXTRACTED)
+  AuthMiddleware --[method]--> .authenticate()  (EXTRACTED)
+  AuthMiddleware --[method]--> .process_request()  (EXTRACTED)
+  AuthMiddleware --[rationale_for]--> Middleware that validates auth tokens on incoming requests.  (EXTRACTED)
+  AuthMiddleware --[uses]--> AuthService  (INFERRED)
+  AuthMiddleware --[uses]--> OrderRoutes  (INFERRED)
+  AuthMiddleware --[uses]--> AuthRoutes  (INFERRED)
+  AuthMiddleware --[uses]--> HTTP route handlers for order operations.  (INFERRED)
+  AuthMiddleware --[uses]--> POST /orders - create a new order.  (INFERRED)
+  AuthMiddleware --[uses]--> GET /orders - list orders.  (INFERRED)
+  AuthMiddleware --[uses]--> HTTP route handlers for authentication.  (INFERRED)
+  .authenticate() --[calls]--> .process_request()  (INFERRED)
+  .authenticate() --[rationale_for]--> Check if request has a valid auth token.  (EXTRACTED)
+  .process_request() --[rationale_for]--> Process and enrich request before routing.  (EXTRACTED)
+  API middleware - authentication and request processing. --[uses]--> AuthService  (INFERRED)
+  Middleware that validates auth tokens on incoming requests. --[uses]--> AuthService  (INFERRED)
+  Check if request has a valid auth token. --[uses]--> AuthService  (INFERRED)
+  Process and enrich request before routing. --[uses]--> AuthService  (INFERRED)
+  routes.py --[contains]--> OrderRoutes  (EXTRACTED)
+  routes.py --[contains]--> AuthRoutes  (EXTRACTED)
+  OrderRoutes --[method]--> .__init__()  (EXTRACTED)
+  OrderRoutes --[method]--> .create_order()  (EXTRACTED)
+  OrderRoutes --[method]--> .get_orders()  (EXTRACTED)
+  OrderRoutes --[rationale_for]--> HTTP route handlers for order operations.  (EXTRACTED)
+  OrderRoutes --[uses]--> PaymentService  (INFERRED)
+  OrderRoutes --[uses]--> AuthService  (INFERRED)
+  OrderRoutes --[uses]--> DashboardView  (INFERRED)
+  OrderRoutes --[uses]--> LoginView  (INFERRED)
+  OrderRoutes --[uses]--> UserProfileView  (INFERRED)
+  OrderRoutes --[uses]--> Frontend views - renders pages by calling the API layer.  (INFERRED)
+  OrderRoutes --[uses]--> Render an HTML template with data.  (INFERRED)
+  OrderRoutes --[uses]--> Render the dashboard page.  (INFERRED)
+  OrderRoutes --[uses]--> Render the login page.  (INFERRED)
+  OrderRoutes --[uses]--> VIOLATION: Directly accesses database models from frontend.  (INFERRED)
+  OrderRoutes --[uses]--> Render user profile - BAD: uses DB model directly.  (INFERRED)
+  .create_order() --[rationale_for]--> POST /orders - create a new order.  (EXTRACTED)
+  .get_orders() --[rationale_for]--> GET /orders - list orders.  (EXTRACTED)
+  AuthRoutes --[method]--> .__init__()  (EXTRACTED)
+  AuthRoutes --[method]--> .login()  (EXTRACTED)
+  AuthRoutes --[rationale_for]--> HTTP route handlers for authentication.  (EXTRACTED)
+  AuthRoutes --[uses]--> PaymentService  (INFERRED)
+  AuthRoutes --[uses]--> AuthService  (INFERRED)
+  AuthRoutes --[uses]--> DashboardView  (INFERRED)
+  AuthRoutes --[uses]--> LoginView  (INFERRED)
+  AuthRoutes --[uses]--> UserProfileView  (INFERRED)
+  AuthRoutes --[uses]--> Frontend views - renders pages by calling the API layer.  (INFERRED)
+  AuthRoutes --[uses]--> Render an HTML template with data.  (INFERRED)
+  AuthRoutes --[uses]--> Render the dashboard page.  (INFERRED)
+  AuthRoutes --[uses]--> Render the login page.  (INFERRED)
+  AuthRoutes --[uses]--> VIOLATION: Directly accesses database models from frontend.  (INFERRED)
+  AuthRoutes --[uses]--> Render user profile - BAD: uses DB model directly.  (INFERRED)
+  HTTP route handlers for order operations. --[uses]--> PaymentService  (INFERRED)
+  HTTP route handlers for order operations. --[uses]--> AuthService  (INFERRED)
+  POST /orders - create a new order. --[uses]--> PaymentService  (INFERRED)
+  POST /orders - create a new order. --[uses]--> AuthService  (INFERRED)
+  GET /orders - list orders. --[uses]--> PaymentService  (INFERRED)
+  GET /orders - list orders. --[uses]--> AuthService  (INFERRED)
+  HTTP route handlers for authentication. --[uses]--> PaymentService  (INFERRED)
+  HTTP route handlers for authentication. --[uses]--> AuthService  (INFERRED)
+  connection.py --[contains]--> DatabasePool  (EXTRACTED)
+  connection.py --[rationale_for]--> Database connection management.  (EXTRACTED)
+  DatabasePool --[method]--> .__init__()  (EXTRACTED)
+  DatabasePool --[method]--> .get_connection()  (EXTRACTED)
+  DatabasePool --[method]--> .release()  (EXTRACTED)
+  DatabasePool --[rationale_for]--> Connection pool for database access.  (EXTRACTED)
+  DatabasePool --[uses]--> User  (INFERRED)
+  DatabasePool --[uses]--> Product  (INFERRED)
+  DatabasePool --[uses]--> Order  (INFERRED)
+  DatabasePool --[uses]--> Database models - SQLAlchemy-style ORM definitions.  (INFERRED)
+  DatabasePool --[uses]--> Persist user to database.  (INFERRED)
+  DatabasePool --[uses]--> Persist product to database.  (INFERRED)
+  DatabasePool --[uses]--> AuthService  (INFERRED)
+  DatabasePool --[uses]--> Authentication service - handles user login and token management.  (INFERRED)
+  DatabasePool --[uses]--> Handles authentication flows.  (INFERRED)
+  DatabasePool --[uses]--> Authenticate user and return a session token.  (INFERRED)
+  DatabasePool --[uses]--> Verify if a session token is valid.  (INFERRED)
+  DatabasePool --[uses]--> Invalidate a session token.  (INFERRED)
+  DatabasePool --[uses]--> PaymentService  (INFERRED)
+  DatabasePool --[uses]--> Payment processing service.  (INFERRED)
+  DatabasePool --[uses]--> Handles payment processing for orders.  (INFERRED)
+  DatabasePool --[uses]--> Process payment for an order.  (INFERRED)
+  .get_connection() --[rationale_for]--> Get a connection from the pool.  (EXTRACTED)
+  .release() --[rationale_for]--> Release a connection back to the pool.  (EXTRACTED)
+  models.py --[contains]--> User  (EXTRACTED)
+  models.py --[contains]--> Product  (EXTRACTED)
+  models.py --[contains]--> Order  (EXTRACTED)
+  models.py --[rationale_for]--> Database models - SQLAlchemy-style ORM definitions.  (EXTRACTED)
+  User --[method]--> .__init__()  (EXTRACTED)
+  User --[method]--> .save()  (EXTRACTED)
+  User --[uses]--> DashboardView  (INFERRED)
+  User --[uses]--> LoginView  (INFERRED)
+  User --[uses]--> UserProfileView  (INFERRED)
+  User --[uses]--> Frontend views - renders pages by calling the API layer.  (INFERRED)
+  User --[uses]--> Render an HTML template with data.  (INFERRED)
+  User --[uses]--> Render the dashboard page.  (INFERRED)
+  User --[uses]--> Render the login page.  (INFERRED)
+  User --[uses]--> VIOLATION: Directly accesses database models from frontend.  (INFERRED)
+  User --[uses]--> Render user profile - BAD: uses DB model directly.  (INFERRED)
+  User --[uses]--> AuthService  (INFERRED)
+  User --[uses]--> Authentication service - handles user login and token management.  (INFERRED)
+  User --[uses]--> Handles authentication flows.  (INFERRED)
+  User --[uses]--> Authenticate user and return a session token.  (INFERRED)
+  User --[uses]--> Verify if a session token is valid.  (INFERRED)
+  User --[uses]--> Invalidate a session token.  (INFERRED)
+  User --[uses]--> PaymentService  (INFERRED)
+  User --[uses]--> Payment processing service.  (INFERRED)
+  User --[uses]--> Handles payment processing for orders.  (INFERRED)
+  User --[uses]--> Process payment for an order.  (INFERRED)
+  .save() --[rationale_for]--> Persist user to database.  (EXTRACTED)
+  Product --[method]--> .__init__()  (EXTRACTED)
+  Product --[method]--> .save()  (EXTRACTED)
+  .save() --[rationale_for]--> Persist product to database.  (EXTRACTED)
+  Order --[method]--> .__init__()  (EXTRACTED)
+  Order --[uses]--> PaymentService  (INFERRED)
+  Order --[uses]--> Payment processing service.  (INFERRED)
+  Order --[uses]--> Handles payment processing for orders.  (INFERRED)
+  Order --[uses]--> Process payment for an order.  (INFERRED)
+  components.py --[contains]--> ProductCard  (EXTRACTED)
+  components.py --[contains]--> NavigationBar  (EXTRACTED)
+  components.py --[contains]--> PaymentWidget  (EXTRACTED)
+  components.py --[rationale_for]--> Frontend UI components.  (EXTRACTED)
+  ProductCard --[method]--> .__init__()  (EXTRACTED)
+  ProductCard --[method]--> .render()  (EXTRACTED)
+  ProductCard --[rationale_for]--> Renders a product card in the UI.  (EXTRACTED)
+  ProductCard --[uses]--> PaymentService  (INFERRED)
+  .render() --[rationale_for]--> Render the product card as HTML.  (EXTRACTED)
+  NavigationBar --[method]--> .__init__()  (EXTRACTED)
+  NavigationBar --[method]--> .render()  (EXTRACTED)
+  NavigationBar --[rationale_for]--> Top navigation bar component.  (EXTRACTED)
+  NavigationBar --[uses]--> PaymentService  (INFERRED)
+  .render() --[rationale_for]--> Render navigation bar.  (EXTRACTED)
+  PaymentWidget --[method]--> .__init__()  (EXTRACTED)
+  PaymentWidget --[method]--> .render_payment_form()  (EXTRACTED)
+  PaymentWidget --[rationale_for]--> VIOLATION: Directly uses PaymentService from frontend.  (EXTRACTED)
+  PaymentWidget --[uses]--> PaymentService  (INFERRED)
+  .render_payment_form() --[rationale_for]--> Render payment form - BAD: uses service directly.  (EXTRACTED)
+  Frontend UI components. --[uses]--> PaymentService  (INFERRED)
+  Renders a product card in the UI. --[uses]--> PaymentService  (INFERRED)
+  Render the product card as HTML. --[uses]--> PaymentService  (INFERRED)
+  Top navigation bar component. --[uses]--> PaymentService  (INFERRED)
+  Render navigation bar. --[uses]--> PaymentService  (INFERRED)
+  VIOLATION: Directly uses PaymentService from frontend. --[uses]--> PaymentService  (INFERRED)
+  Render payment form - BAD: uses service directly. --[uses]--> PaymentService  (INFERRED)
+  views.py --[contains]--> render_template()  (EXTRACTED)
+  views.py --[contains]--> DashboardView  (EXTRACTED)
+  views.py --[contains]--> LoginView  (EXTRACTED)
+  views.py --[contains]--> UserProfileView  (EXTRACTED)
+  views.py --[rationale_for]--> Frontend views - renders pages by calling the API layer.  (EXTRACTED)
+  render_template() --[calls]--> .render()  (INFERRED)
+  render_template() --[calls]--> .render()  (INFERRED)
+  render_template() --[calls]--> .render()  (INFERRED)
+  render_template() --[rationale_for]--> Render an HTML template with data.  (EXTRACTED)
+  DashboardView --[method]--> .__init__()  (EXTRACTED)
+  DashboardView --[method]--> .render()  (EXTRACTED)
+  .render() --[rationale_for]--> Render the dashboard page.  (EXTRACTED)
+  LoginView --[method]--> .__init__()  (EXTRACTED)
+  LoginView --[method]--> .render()  (EXTRACTED)
+  .render() --[rationale_for]--> Render the login page.  (EXTRACTED)
+  UserProfileView --[method]--> .render()  (EXTRACTED)
+  UserProfileView --[rationale_for]--> VIOLATION: Directly accesses database models from frontend.  (EXTRACTED)
+  .render() --[rationale_for]--> Render user profile - BAD: uses DB model directly.  (EXTRACTED)
+  auth.py --[contains]--> AuthService  (EXTRACTED)
+  auth.py --[rationale_for]--> Authentication service - handles user login and token management.  (EXTRACTED)
+  AuthService --[method]--> .__init__()  (EXTRACTED)
+  AuthService --[method]--> .login()  (EXTRACTED)
+  AuthService --[method]--> .verify_token()  (EXTRACTED)
+  AuthService --[method]--> .logout()  (EXTRACTED)
+  AuthService --[rationale_for]--> Handles authentication flows.  (EXTRACTED)
+  .login() --[rationale_for]--> Authenticate user and return a session token.  (EXTRACTED)
+  .verify_token() --[rationale_for]--> Verify if a session token is valid.  (EXTRACTED)
+  .logout() --[rationale_for]--> Invalidate a session token.  (EXTRACTED)
+  payment.py --[contains]--> PaymentService  (EXTRACTED)
+  payment.py --[rationale_for]--> Payment processing service.  (EXTRACTED)
+  PaymentService --[method]--> .__init__()  (EXTRACTED)
+  PaymentService --[method]--> .process_payment()  (EXTRACTED)
+  PaymentService --[method]--> .refund()  (EXTRACTED)
+  PaymentService --[rationale_for]--> Handles payment processing for orders.  (EXTRACTED)
+  .process_payment() --[rationale_for]--> Process payment for an order.  (EXTRACTED)
+  helpers.py --[contains]--> generate_id()  (EXTRACTED)
+  helpers.py --[contains]--> format_currency()  (EXTRACTED)
+  helpers.py --[contains]--> validate_email()  (EXTRACTED)
+  helpers.py --[rationale_for]--> Shared utility functions used across all layers.  (EXTRACTED)
+  generate_id() --[rationale_for]--> Generate a unique ID with the given prefix.  (EXTRACTED)
+  format_currency() --[rationale_for]--> Format a monetary amount for display.  (EXTRACTED)
+  validate_email() --[rationale_for]--> Basic email validation.  (EXTRACTED)
+
+======================================================================
+STEP 5: Graph Diff ΓÇö Signal-to-Noise Analysis
+======================================================================
+
+Summary: 16 new nodes, 48 new edges, 7 nodes removed, 13 edges removed
+
+--- NEW NODES (16) ---
+  + .render() (id: views_userprofileview_render)
+  + VIOLATION: Directly accesses database models from frontend. (id: views_rationale_37)
+  + VIOLATION: Directly uses PaymentService from frontend. (id: components_rationale_39)
+  + Render the dashboard page. (id: views_rationale_20)
+  + Render the login page. (id: views_rationale_32)
+  + Renders a product card in the UI. (id: components_rationale_9)
+  + Render payment form - BAD: uses service directly. (id: components_rationale_45)
+  + Top navigation bar component. (id: components_rationale_27)
+  + Render an HTML template with data. (id: views_rationale_9)
+  + .render_payment_form() (id: components_paymentwidget_render_payment_form)
+  + .__init__() (id: components_paymentwidget_init)
+  + Render navigation bar. (id: components_rationale_33)
+  + Render user profile - BAD: uses DB model directly. (id: views_rationale_40)
+  + Render the product card as HTML. (id: components_rationale_17)
+  + PaymentWidget (id: components_paymentwidget)
+  + UserProfileView (id: views_userprofileview)
+
+--- REMOVED NODES (7) ---
+  - Render the dashboard page. (id: views_rationale_17)
+  - Render the product card as HTML. (id: components_rationale_14)
+  - Top navigation bar component. (id: components_rationale_24)
+  - Renders a product card in the UI. (id: components_rationale_6)
+  - Render navigation bar. (id: components_rationale_30)
+  - Render an HTML template with data. (id: views_rationale_6)
+  - Render the login page. (id: views_rationale_29)
+
+--- NEW EDGES (48) ---
+  + OrderRoutes --[uses]--> UserProfileView  (INFERRED)
+  + OrderRoutes --[uses]--> Render an HTML template with data.  (INFERRED)
+  + OrderRoutes --[uses]--> Render the dashboard page.  (INFERRED)
+  + OrderRoutes --[uses]--> Render the login page.  (INFERRED)
+  + OrderRoutes --[uses]--> VIOLATION: Directly accesses database models from frontend.  (INFERRED)
+  + OrderRoutes --[uses]--> Render user profile - BAD: uses DB model directly.  (INFERRED)
+  + AuthRoutes --[uses]--> UserProfileView  (INFERRED)
+  + AuthRoutes --[uses]--> Render an HTML template with data.  (INFERRED)
+  + AuthRoutes --[uses]--> Render the dashboard page.  (INFERRED)
+  + AuthRoutes --[uses]--> Render the login page.  (INFERRED)
+  + AuthRoutes --[uses]--> VIOLATION: Directly accesses database models from frontend.  (INFERRED)
+  + AuthRoutes --[uses]--> Render user profile - BAD: uses DB model directly.  (INFERRED)
+  + User --[uses]--> DashboardView  (INFERRED)
+  + User --[uses]--> LoginView  (INFERRED)
+  + User --[uses]--> UserProfileView  (INFERRED)
+  + User --[uses]--> Frontend views - renders pages by calling the API layer.  (INFERRED)
+  + User --[uses]--> Render an HTML template with data.  (INFERRED)
+  + User --[uses]--> Render the dashboard page.  (INFERRED)
+  + User --[uses]--> Render the login page.  (INFERRED)
+  + User --[uses]--> VIOLATION: Directly accesses database models from frontend.  (INFERRED)
+  + User --[uses]--> Render user profile - BAD: uses DB model directly.  (INFERRED)
+  + components.py --[contains]--> PaymentWidget  (EXTRACTED)
+  + ProductCard --[rationale_for]--> Renders a product card in the UI.  (EXTRACTED)
+  + ProductCard --[uses]--> PaymentService  (INFERRED)
+  + .render() --[rationale_for]--> Render the product card as HTML.  (EXTRACTED)
+  + NavigationBar --[rationale_for]--> Top navigation bar component.  (EXTRACTED)
+  + NavigationBar --[uses]--> PaymentService  (INFERRED)
+  + .render() --[rationale_for]--> Render navigation bar.  (EXTRACTED)
+  + PaymentWidget --[method]--> .__init__()  (EXTRACTED)
+  + PaymentWidget --[method]--> .render_payment_form()  (EXTRACTED)
+  + PaymentWidget --[rationale_for]--> VIOLATION: Directly uses PaymentService from frontend.  (EXTRACTED)
+  + PaymentWidget --[uses]--> PaymentService  (INFERRED)
+  + .render_payment_form() --[rationale_for]--> Render payment form - BAD: uses service directly.  (EXTRACTED)
+  + Frontend UI components. --[uses]--> PaymentService  (INFERRED)
+  + Renders a product card in the UI. --[uses]--> PaymentService  (INFERRED)
+  + Render the product card as HTML. --[uses]--> PaymentService  (INFERRED)
+  + Top navigation bar component. --[uses]--> PaymentService  (INFERRED)
+  + Render navigation bar. --[uses]--> PaymentService  (INFERRED)
+  + VIOLATION: Directly uses PaymentService from frontend. --[uses]--> PaymentService  (INFERRED)
+  + Render payment form - BAD: uses service directly. --[uses]--> PaymentService  (INFERRED)
+  + views.py --[contains]--> UserProfileView  (EXTRACTED)
+  + render_template() --[calls]--> .render()  (INFERRED)
+  + render_template() --[rationale_for]--> Render an HTML template with data.  (EXTRACTED)
+  + .render() --[rationale_for]--> Render the dashboard page.  (EXTRACTED)
+  + .render() --[rationale_for]--> Render the login page.  (EXTRACTED)
+  + UserProfileView --[method]--> .render()  (EXTRACTED)
+  + UserProfileView --[rationale_for]--> VIOLATION: Directly accesses database models from frontend.  (EXTRACTED)
+  + .render() --[rationale_for]--> Render user profile - BAD: uses DB model directly.  (EXTRACTED)
+
+--- REMOVED EDGES (13) ---
+  - OrderRoutes --[uses]--> Render an HTML template with data.  (INFERRED)
+  - OrderRoutes --[uses]--> Render the dashboard page.  (INFERRED)
+  - OrderRoutes --[uses]--> Render the login page.  (INFERRED)
+  - AuthRoutes --[uses]--> Render an HTML template with data.  (INFERRED)
+  - AuthRoutes --[uses]--> Render the dashboard page.  (INFERRED)
+  - AuthRoutes --[uses]--> Render the login page.  (INFERRED)
+  - ProductCard --[rationale_for]--> Renders a product card in the UI.  (EXTRACTED)
+  - .render() --[rationale_for]--> Render the product card as HTML.  (EXTRACTED)
+  - NavigationBar --[rationale_for]--> Top navigation bar component.  (EXTRACTED)
+  - .render() --[rationale_for]--> Render navigation bar.  (EXTRACTED)
+  - render_template() --[rationale_for]--> Render an HTML template with data.  (EXTRACTED)
+  - .render() --[rationale_for]--> Render the dashboard page.  (EXTRACTED)
+  - .render() --[rationale_for]--> Render the login page.  (EXTRACTED)
+
+Γ£à Diff saved to C:\Users\Jonatan\Documents\projects_2026\archlens\spike\diff_output.json
+
+======================================================================
+STEP 6: Signal-to-Noise Evaluation
+======================================================================
+
+≡ƒÄ» VIOLATION EDGES (expected): 27
+  ≡ƒö┤ OrderRoutes --[uses]--> VIOLATION: Directly accesses database models from frontend.
+  ≡ƒö┤ AuthRoutes --[uses]--> VIOLATION: Directly accesses database models from frontend.
+  ≡ƒö┤ User --[uses]--> DashboardView
+  ≡ƒö┤ User --[uses]--> LoginView
+  ≡ƒö┤ User --[uses]--> UserProfileView
+  ≡ƒö┤ User --[uses]--> Frontend views - renders pages by calling the API layer.
+  ≡ƒö┤ User --[uses]--> Render an HTML template with data.
+  ≡ƒö┤ User --[uses]--> Render the dashboard page.
+  ≡ƒö┤ User --[uses]--> Render the login page.
+  ≡ƒö┤ User --[uses]--> VIOLATION: Directly accesses database models from frontend.
+  ≡ƒö┤ User --[uses]--> Render user profile - BAD: uses DB model directly.
+  ≡ƒö┤ components.py --[contains]--> PaymentWidget
+  ≡ƒö┤ ProductCard --[uses]--> PaymentService
+  ≡ƒö┤ NavigationBar --[uses]--> PaymentService
+  ≡ƒö┤ PaymentWidget --[method]--> .__init__()
+  ≡ƒö┤ PaymentWidget --[method]--> .render_payment_form()
+  ≡ƒö┤ PaymentWidget --[rationale_for]--> VIOLATION: Directly uses PaymentService from frontend.
+  ≡ƒö┤ PaymentWidget --[uses]--> PaymentService
+  ≡ƒö┤ .render_payment_form() --[rationale_for]--> Render payment form - BAD: uses service directly.
+  ≡ƒö┤ Frontend UI components. --[uses]--> PaymentService
+  ≡ƒö┤ Renders a product card in the UI. --[uses]--> PaymentService
+  ≡ƒö┤ Render the product card as HTML. --[uses]--> PaymentService
+  ≡ƒö┤ Top navigation bar component. --[uses]--> PaymentService
+  ≡ƒö┤ Render navigation bar. --[uses]--> PaymentService
+  ≡ƒö┤ VIOLATION: Directly uses PaymentService from frontend. --[uses]--> PaymentService
+  ≡ƒö┤ Render payment form - BAD: uses service directly. --[uses]--> PaymentService
+  ≡ƒö┤ UserProfileView --[rationale_for]--> VIOLATION: Directly accesses database models from frontend.
+
+≡ƒôó NOISE EDGES (unexpected): 21
+  ΓÜ¬ OrderRoutes --[uses]--> UserProfileView
+  ΓÜ¬ OrderRoutes --[uses]--> Render an HTML template with data.
+  ΓÜ¬ OrderRoutes --[uses]--> Render the dashboard page.
+  ΓÜ¬ OrderRoutes --[uses]--> Render the login page.
+  ΓÜ¬ OrderRoutes --[uses]--> Render user profile - BAD: uses DB model directly.
+  ΓÜ¬ AuthRoutes --[uses]--> UserProfileView
+  ΓÜ¬ AuthRoutes --[uses]--> Render an HTML template with data.
+  ΓÜ¬ AuthRoutes --[uses]--> Render the dashboard page.
+  ΓÜ¬ AuthRoutes --[uses]--> Render the login page.
+  ΓÜ¬ AuthRoutes --[uses]--> Render user profile - BAD: uses DB model directly.
+  ΓÜ¬ ProductCard --[rationale_for]--> Renders a product card in the UI.
+  ΓÜ¬ .render() --[rationale_for]--> Render the product card as HTML.
+  ΓÜ¬ NavigationBar --[rationale_for]--> Top navigation bar component.
+  ΓÜ¬ .render() --[rationale_for]--> Render navigation bar.
+  ΓÜ¬ views.py --[contains]--> UserProfileView
+  ΓÜ¬ render_template() --[calls]--> .render()
+  ΓÜ¬ render_template() --[rationale_for]--> Render an HTML template with data.
+  ΓÜ¬ .render() --[rationale_for]--> Render the dashboard page.
+  ΓÜ¬ .render() --[rationale_for]--> Render the login page.
+  ΓÜ¬ UserProfileView --[method]--> .render()
+  ΓÜ¬ .render() --[rationale_for]--> Render user profile - BAD: uses DB model directly.
+
+Γ£à Original files restored
+
+======================================================================
+FINAL SUMMARY
+======================================================================
+
+Import Tests: 6/6 passed
+Base Graph:   94 nodes, 152 edges
+Head Graph:   103 nodes, 187 edges
+Diff:         16 new nodes, 48 new edges, 7 nodes removed, 13 edges removed
+Signal:       27 violation edges detected
+Noise:        21 non-violation edges
+New Nodes:    16
+Removed:      7 nodes, 13 edges
+
+======================================================================
+  GO/NO-GO VERDICT: Γ¥î NO-GO
+  Reason: Noise overwhelms signal: 21 noise vs 27 signal
+======================================================================

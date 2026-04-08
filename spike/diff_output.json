@@ -1,0 +1,469 @@
+{
+  "new_nodes": [
+    {
+      "id": "views_userprofileview_render",
+      "label": ".render()"
+    },
+    {
+      "id": "views_rationale_37",
+      "label": "VIOLATION: Directly accesses database models from frontend."
+    },
+    {
+      "id": "components_rationale_39",
+      "label": "VIOLATION: Directly uses PaymentService from frontend."
+    },
+    {
+      "id": "views_rationale_20",
+      "label": "Render the dashboard page."
+    },
+    {
+      "id": "views_rationale_32",
+      "label": "Render the login page."
+    },
+    {
+      "id": "components_rationale_9",
+      "label": "Renders a product card in the UI."
+    },
+    {
+      "id": "components_rationale_45",
+      "label": "Render payment form - BAD: uses service directly."
+    },
+    {
+      "id": "components_rationale_27",
+      "label": "Top navigation bar component."
+    },
+    {
+      "id": "views_rationale_9",
+      "label": "Render an HTML template with data."
+    },
+    {
+      "id": "components_paymentwidget_render_payment_form",
+      "label": ".render_payment_form()"
+    },
+    {
+      "id": "components_paymentwidget_init",
+      "label": ".__init__()"
+    },
+    {
+      "id": "components_rationale_33",
+      "label": "Render navigation bar."
+    },
+    {
+      "id": "views_rationale_40",
+      "label": "Render user profile - BAD: uses DB model directly."
+    },
+    {
+      "id": "components_rationale_17",
+      "label": "Render the product card as HTML."
+    },
+    {
+      "id": "components_paymentwidget",
+      "label": "PaymentWidget"
+    },
+    {
+      "id": "views_userprofileview",
+      "label": "UserProfileView"
+    }
+  ],
+  "removed_nodes": [
+    {
+      "id": "views_rationale_17",
+      "label": "Render the dashboard page."
+    },
+    {
+      "id": "components_rationale_14",
+      "label": "Render the product card as HTML."
+    },
+    {
+      "id": "components_rationale_24",
+      "label": "Top navigation bar component."
+    },
+    {
+      "id": "components_rationale_6",
+      "label": "Renders a product card in the UI."
+    },
+    {
+      "id": "components_rationale_30",
+      "label": "Render navigation bar."
+    },
+    {
+      "id": "views_rationale_6",
+      "label": "Render an HTML template with data."
+    },
+    {
+      "id": "views_rationale_29",
+      "label": "Render the login page."
+    }
+  ],
+  "new_edges": [
+    {
+      "source": "routes_orderroutes",
+      "target": "views_userprofileview",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "views_rationale_9",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "views_rationale_20",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "views_rationale_32",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "views_rationale_37",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "views_rationale_40",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "views_userprofileview",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "views_rationale_9",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "views_rationale_20",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "views_rationale_32",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "views_rationale_37",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "views_rationale_40",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "models_user",
+      "target": "views_dashboardview",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "models_user",
+      "target": "views_loginview",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "models_user",
+      "target": "views_userprofileview",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "models_user",
+      "target": "views_rationale_1",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "models_user",
+      "target": "views_rationale_9",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "models_user",
+      "target": "views_rationale_20",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "models_user",
+      "target": "views_rationale_32",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "models_user",
+      "target": "views_rationale_37",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "models_user",
+      "target": "views_rationale_40",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components",
+      "target": "components_paymentwidget",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_productcard",
+      "target": "components_rationale_9",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_productcard",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_productcard_render",
+      "target": "components_rationale_17",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_navigationbar",
+      "target": "components_rationale_27",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_navigationbar",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_navigationbar_render",
+      "target": "components_rationale_33",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_paymentwidget",
+      "target": "components_paymentwidget_init",
+      "relation": "method",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_paymentwidget",
+      "target": "components_paymentwidget_render_payment_form",
+      "relation": "method",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_paymentwidget",
+      "target": "components_rationale_39",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_paymentwidget",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_paymentwidget_render_payment_form",
+      "target": "components_rationale_45",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_rationale_1",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_rationale_9",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_rationale_17",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_rationale_27",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_rationale_33",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_rationale_39",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_rationale_45",
+      "target": "payment_paymentservice",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "views",
+      "target": "views_userprofileview",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "views_render_template",
+      "target": "views_userprofileview_render",
+      "relation": "calls",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "views_render_template",
+      "target": "views_rationale_9",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "views_dashboardview_render",
+      "target": "views_rationale_20",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "views_loginview_render",
+      "target": "views_rationale_32",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "views_userprofileview",
+      "target": "views_userprofileview_render",
+      "relation": "method",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "views_userprofileview",
+      "target": "views_rationale_37",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "views_userprofileview_render",
+      "target": "views_rationale_40",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    }
+  ],
+  "removed_edges": [
+    {
+      "source": "routes_orderroutes",
+      "target": "views_rationale_6",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "views_rationale_17",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "views_rationale_29",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "views_rationale_6",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "views_rationale_17",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "views_rationale_29",
+      "relation": "uses",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "components_productcard",
+      "target": "components_rationale_6",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_productcard_render",
+      "target": "components_rationale_14",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_navigationbar",
+      "target": "components_rationale_24",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "components_navigationbar_render",
+      "target": "components_rationale_30",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "views_render_template",
+      "target": "views_rationale_6",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "views_dashboardview_render",
+      "target": "views_rationale_17",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "views_loginview_render",
+      "target": "views_rationale_29",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED"
+    }
+  ],
+  "summary": "16 new nodes, 48 new edges, 7 nodes removed, 13 edges removed"
+}

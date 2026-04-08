@@ -1,0 +1,1801 @@
+{
+  "nodes": [
+    {
+      "id": "init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "middleware",
+      "label": "middleware.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "middleware_authmiddleware",
+      "label": "AuthMiddleware",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L5"
+    },
+    {
+      "id": "middleware_authmiddleware_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L8"
+    },
+    {
+      "id": "middleware_authmiddleware_authenticate",
+      "label": ".authenticate()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "middleware_authmiddleware_process_request",
+      "label": ".process_request()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L18"
+    },
+    {
+      "id": "middleware_rationale_1",
+      "label": "API middleware - authentication and request processing.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "middleware_rationale_6",
+      "label": "Middleware that validates auth tokens on incoming requests.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "middleware_rationale_12",
+      "label": "Check if request has a valid auth token.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "middleware_rationale_19",
+      "label": "Process and enrich request before routing.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L19"
+    },
+    {
+      "id": "routes",
+      "label": "routes.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "routes_orderroutes",
+      "label": "OrderRoutes",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L7"
+    },
+    {
+      "id": "routes_orderroutes_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L10"
+    },
+    {
+      "id": "routes_orderroutes_create_order",
+      "label": ".create_order()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "routes_orderroutes_get_orders",
+      "label": ".get_orders()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "routes_authroutes",
+      "label": "AuthRoutes",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L30"
+    },
+    {
+      "id": "routes_authroutes_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L33"
+    },
+    {
+      "id": "routes_authroutes_login",
+      "label": ".login()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L36"
+    },
+    {
+      "id": "routes_rationale_8",
+      "label": "HTTP route handlers for order operations.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L8"
+    },
+    {
+      "id": "routes_rationale_15",
+      "label": "POST /orders - create a new order.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "routes_rationale_23",
+      "label": "GET /orders - list orders.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L23"
+    },
+    {
+      "id": "routes_rationale_31",
+      "label": "HTTP route handlers for authentication.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "connection",
+      "label": "connection.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "connection_databasepool",
+      "label": "DatabasePool",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L5"
+    },
+    {
+      "id": "connection_databasepool_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L8"
+    },
+    {
+      "id": "connection_databasepool_get_connection",
+      "label": ".get_connection()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "connection_databasepool_release",
+      "label": ".release()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "connection_rationale_1",
+      "label": "Database connection management.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "connection_rationale_6",
+      "label": "Connection pool for database access.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "connection_rationale_15",
+      "label": "Get a connection from the pool.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "connection_rationale_21",
+      "label": "Release a connection back to the pool.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "models",
+      "label": "models.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "models_user",
+      "label": "User",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "models_user_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L9"
+    },
+    {
+      "id": "models_user_save",
+      "label": ".save()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "models_product",
+      "label": "Product",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "models_product_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "models_product_save",
+      "label": ".save()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L30"
+    },
+    {
+      "id": "models_order",
+      "label": "Order",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L37"
+    },
+    {
+      "id": "models_order_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "models_rationale_1",
+      "label": "Database models - SQLAlchemy-style ORM definitions.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "models_rationale_16",
+      "label": "Persist user to database.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "models_rationale_31",
+      "label": "Persist product to database.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "components",
+      "label": "components.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_productcard",
+      "label": "ProductCard",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L8"
+    },
+    {
+      "id": "components_productcard_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "components_productcard_render",
+      "label": ".render()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "components_navigationbar",
+      "label": "NavigationBar",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "components_navigationbar_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L29"
+    },
+    {
+      "id": "components_navigationbar_render",
+      "label": ".render()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L32"
+    },
+    {
+      "id": "components_paymentwidget",
+      "label": "PaymentWidget",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "components_paymentwidget_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L41"
+    },
+    {
+      "id": "components_paymentwidget_render_payment_form",
+      "label": ".render_payment_form()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "components_rationale_1",
+      "label": "Frontend UI components.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_rationale_9",
+      "label": "Renders a product card in the UI.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L9"
+    },
+    {
+      "id": "components_rationale_17",
+      "label": "Render the product card as HTML.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "components_rationale_27",
+      "label": "Top navigation bar component.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L27"
+    },
+    {
+      "id": "components_rationale_33",
+      "label": "Render navigation bar.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L33"
+    },
+    {
+      "id": "components_rationale_39",
+      "label": "VIOLATION: Directly uses PaymentService from frontend.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L39"
+    },
+    {
+      "id": "components_rationale_45",
+      "label": "Render payment form - BAD: uses service directly.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "views",
+      "label": "views.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "views_render_template",
+      "label": "render_template()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L8"
+    },
+    {
+      "id": "views_dashboardview",
+      "label": "DashboardView",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "views_dashboardview_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "views_dashboardview_render",
+      "label": ".render()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L19"
+    },
+    {
+      "id": "views_loginview",
+      "label": "LoginView",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "views_loginview_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "views_loginview_render",
+      "label": ".render()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "views_userprofileview",
+      "label": "UserProfileView",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L36"
+    },
+    {
+      "id": "views_userprofileview_render",
+      "label": ".render()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L39"
+    },
+    {
+      "id": "views_rationale_1",
+      "label": "Frontend views - renders pages by calling the API layer.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "views_rationale_9",
+      "label": "Render an HTML template with data.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L9"
+    },
+    {
+      "id": "views_rationale_20",
+      "label": "Render the dashboard page.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "views_rationale_32",
+      "label": "Render the login page.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L32"
+    },
+    {
+      "id": "views_rationale_37",
+      "label": "VIOLATION: Directly accesses database models from frontend.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L37"
+    },
+    {
+      "id": "views_rationale_40",
+      "label": "Render user profile - BAD: uses DB model directly.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "auth",
+      "label": "auth.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "auth_authservice",
+      "label": "AuthService",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L7"
+    },
+    {
+      "id": "auth_authservice_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L10"
+    },
+    {
+      "id": "auth_authservice_login",
+      "label": ".login()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "auth_authservice_verify_token",
+      "label": ".verify_token()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "auth_authservice_logout",
+      "label": ".logout()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "auth_rationale_1",
+      "label": "Authentication service - handles user login and token management.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "auth_rationale_8",
+      "label": "Handles authentication flows.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L8"
+    },
+    {
+      "id": "auth_rationale_15",
+      "label": "Authenticate user and return a session token.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "auth_rationale_25",
+      "label": "Verify if a session token is valid.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "auth_rationale_29",
+      "label": "Invalidate a session token.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L29"
+    },
+    {
+      "id": "payment",
+      "label": "payment.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "payment_paymentservice",
+      "label": "PaymentService",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L7"
+    },
+    {
+      "id": "payment_paymentservice_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L10"
+    },
+    {
+      "id": "payment_paymentservice_process_payment",
+      "label": ".process_payment()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "payment_paymentservice_refund",
+      "label": ".refund()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "payment_rationale_1",
+      "label": "Payment processing service.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "payment_rationale_8",
+      "label": "Handles payment processing for orders.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L8"
+    },
+    {
+      "id": "payment_rationale_14",
+      "label": "Process payment for an order.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "helpers",
+      "label": "helpers.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "helpers_generate_id",
+      "label": "generate_id()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "helpers_format_currency",
+      "label": "format_currency()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "helpers_validate_email",
+      "label": "validate_email()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "helpers_rationale_1",
+      "label": "Shared utility functions used across all layers.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "helpers_rationale_7",
+      "label": "Generate a unique ID with the given prefix.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L7"
+    },
+    {
+      "id": "helpers_rationale_14",
+      "label": "Format a monetary amount for display.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "helpers_rationale_21",
+      "label": "Basic email validation.",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L21"
+    }
+  ],
+  "edges": [
+    {
+      "source": "middleware",
+      "target": "services_auth",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware",
+      "target": "middleware_authmiddleware",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware_authmiddleware",
+      "target": "middleware_authmiddleware_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware_authmiddleware",
+      "target": "middleware_authmiddleware_authenticate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware_authmiddleware",
+      "target": "middleware_authmiddleware_process_request",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware_authmiddleware_process_request",
+      "target": "middleware_authmiddleware_authenticate",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L20",
+      "weight": 0.8
+    },
+    {
+      "source": "middleware_rationale_1",
+      "target": "middleware",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware_rationale_6",
+      "target": "middleware_authmiddleware",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware_rationale_12",
+      "target": "middleware_authmiddleware_authenticate",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware_rationale_19",
+      "target": "middleware_authmiddleware_process_request",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\middleware.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "routes",
+      "target": "services_payment",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "routes",
+      "target": "services_auth",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "routes",
+      "target": "api_middleware",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "routes",
+      "target": "routes_orderroutes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "routes_orderroutes_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "routes_orderroutes_create_order",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_orderroutes",
+      "target": "routes_orderroutes_get_orders",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "routes",
+      "target": "routes_authroutes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "routes_authroutes_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_authroutes",
+      "target": "routes_authroutes_login",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_rationale_8",
+      "target": "routes_orderroutes",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_rationale_15",
+      "target": "routes_orderroutes_create_order",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_rationale_23",
+      "target": "routes_orderroutes_get_orders",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_rationale_31",
+      "target": "routes_authroutes",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\api\\routes.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "connection",
+      "target": "utils_helpers",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "connection",
+      "target": "connection_databasepool",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "connection_databasepool",
+      "target": "connection_databasepool_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "connection_databasepool",
+      "target": "connection_databasepool_get_connection",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "connection_databasepool",
+      "target": "connection_databasepool_release",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "connection_rationale_1",
+      "target": "connection",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "connection_rationale_6",
+      "target": "connection_databasepool",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "connection_rationale_15",
+      "target": "connection_databasepool_get_connection",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "connection_rationale_21",
+      "target": "connection_databasepool_release",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\connection.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "models",
+      "target": "utils_helpers",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "models",
+      "target": "database_connection",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "models",
+      "target": "models_user",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "models_user",
+      "target": "models_user_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "models_user",
+      "target": "models_user_save",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "models",
+      "target": "models_product",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "models_product",
+      "target": "models_product_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "models_product",
+      "target": "models_product_save",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "models",
+      "target": "models_order",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "models_order",
+      "target": "models_order_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "models_rationale_1",
+      "target": "models",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "models_rationale_16",
+      "target": "models_user_save",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "models_rationale_31",
+      "target": "models_product_save",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\database\\models.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "components",
+      "target": "frontend_views",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "components",
+      "target": "services_payment",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "components",
+      "target": "components_productcard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "components_productcard",
+      "target": "components_productcard_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "components_productcard",
+      "target": "components_productcard_render",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "components",
+      "target": "components_navigationbar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "components_navigationbar",
+      "target": "components_navigationbar_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "components_navigationbar",
+      "target": "components_navigationbar_render",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "components",
+      "target": "components_paymentwidget",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "components_paymentwidget",
+      "target": "components_paymentwidget_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "components_paymentwidget",
+      "target": "components_paymentwidget_render_payment_form",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "components_rationale_1",
+      "target": "components",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "components_rationale_9",
+      "target": "components_productcard",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "components_rationale_17",
+      "target": "components_productcard_render",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "components_rationale_27",
+      "target": "components_navigationbar",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "components_rationale_33",
+      "target": "components_navigationbar_render",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "components_rationale_39",
+      "target": "components_paymentwidget",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "components_rationale_45",
+      "target": "components_paymentwidget_render_payment_form",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\components.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "views",
+      "target": "api_routes",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "views",
+      "target": "database_models",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "views",
+      "target": "views_render_template",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "views",
+      "target": "views_dashboardview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "views_dashboardview",
+      "target": "views_dashboardview_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "views_dashboardview",
+      "target": "views_dashboardview_render",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "views",
+      "target": "views_loginview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "views_loginview",
+      "target": "views_loginview_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "views_loginview",
+      "target": "views_loginview_render",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "views",
+      "target": "views_userprofileview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "views_userprofileview",
+      "target": "views_userprofileview_render",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "views_dashboardview_render",
+      "target": "views_render_template",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L22",
+      "weight": 0.8
+    },
+    {
+      "source": "views_loginview_render",
+      "target": "views_render_template",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "views_userprofileview_render",
+      "target": "views_render_template",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L42",
+      "weight": 0.8
+    },
+    {
+      "source": "views_rationale_1",
+      "target": "views",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "views_rationale_9",
+      "target": "views_render_template",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "views_rationale_20",
+      "target": "views_dashboardview_render",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "views_rationale_32",
+      "target": "views_loginview_render",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "views_rationale_37",
+      "target": "views_userprofileview",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "views_rationale_40",
+      "target": "views_userprofileview_render",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\frontend\\views.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "database_models",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "database_connection",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "utils_helpers",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "auth_authservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_authservice",
+      "target": "auth_authservice_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_authservice",
+      "target": "auth_authservice_login",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_authservice",
+      "target": "auth_authservice_verify_token",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_authservice",
+      "target": "auth_authservice_logout",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_rationale_1",
+      "target": "auth",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_rationale_8",
+      "target": "auth_authservice",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_rationale_15",
+      "target": "auth_authservice_login",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_rationale_25",
+      "target": "auth_authservice_verify_token",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "auth_rationale_29",
+      "target": "auth_authservice_logout",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\auth.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "payment",
+      "target": "database_models",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "payment",
+      "target": "database_connection",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "payment",
+      "target": "utils_helpers",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "payment",
+      "target": "payment_paymentservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "payment_paymentservice",
+      "target": "payment_paymentservice_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "payment_paymentservice",
+      "target": "payment_paymentservice_process_payment",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "payment_paymentservice",
+      "target": "payment_paymentservice_refund",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "payment_rationale_1",
+      "target": "payment",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "payment_rationale_8",
+      "target": "payment_paymentservice",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "payment_rationale_14",
+      "target": "payment_paymentservice_process_payment",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\services\\payment.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "hashlib",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "datetime",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_generate_id",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_format_currency",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_validate_email",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers_rationale_1",
+      "target": "helpers",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers_rationale_7",
+      "target": "helpers_generate_id",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers_rationale_14",
+      "target": "helpers_format_currency",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers_rationale_21",
+      "target": "helpers_validate_email",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\Jonatan\\Documents\\projects_2026\\archlens\\spike\\dummy_repo\\utils\\helpers.py",
+      "source_location": "L21",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
